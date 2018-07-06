@@ -20,13 +20,13 @@ var badThingsArr = ["If laughter is the best medicine, your face must be curing 
 
 // gen request/response function to say good things
 function goodThings(request, response) {
-    var i = Math.floor(Math.random()* goodThingsArr.length + 1);
+    var i = Math.floor(Math.random()* goodThingsArr.length);
     // Say good things about user
     response.end("Welcome " + request.url + "\n" + goodThingsArr[i]);
 }
 
 function badThings(request, response) {
-    var i = Math.floor(Math.random()* badThingsArr.length + 1);
+    var i = Math.floor(Math.random()* badThingsArr.length);
     response.end("Welcome " + request.url  + "\n" + badThingsArr[i]);
 }
 
